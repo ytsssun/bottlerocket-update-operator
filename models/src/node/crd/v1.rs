@@ -127,9 +127,9 @@ impl BottlerocketShadowResource for BottlerocketShadow {}
 impl BottlerocketShadow {
     /// Returns whether or not a node has reached the state requested by its spec.
     pub fn has_reached_desired_state(&self) -> bool {
-        self.status.as_ref().map_or(false, |node_status| {
-            node_status.current_state == self.spec.state
-        })
+        self.status
+            .as_ref()
+            .is_some_and(|node_status| node_status.current_state == self.spec.state)
     }
 }
 

@@ -190,7 +190,7 @@ impl BrupopCronScheduler {
 /// Cron expression can be configured to a time window or a specific trigger time.
 /// specific trigger time: 0 0 10 * * Mon */Every Monday at 10AM.
 /// maintenance window (time window): * * 10-12 * * MON */Every Monday between 10:00 and 12:00.
-
+///
 /// brupop controller needs to use different logics to deal with specific trigger time or
 /// maintenance window (time window)
 /// => specific trigger time: trigger brupop update and complete all waitingForUpdate nodes.
