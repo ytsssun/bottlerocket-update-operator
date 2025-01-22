@@ -96,7 +96,7 @@ impl<T: BottlerocketShadowClient> BrupopController<T> {
         self.all_brss()
             .iter()
             .filter(|brs| {
-                brs.status.as_ref().map_or(false, |brs_status| {
+                brs.status.as_ref().is_some_and(|brs_status| {
                     brs_status.current_state != BottlerocketShadowState::Idle
                         || !brs.has_reached_desired_state()
                 })
