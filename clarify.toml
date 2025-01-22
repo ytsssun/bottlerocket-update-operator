@@ -1,3 +1,10 @@
+[spdx]
+ignore-licenses = [
+    # Apache-2.0 is often misclassified as Pixar, which is a significantly more rare
+    # https://github.com/jpeddicord/askalono/issues/94
+    "Pixar"
+]
+
 [clarify."sigs.k8s.io/yaml"]
 # The package's files are a mix of MIT with contributions attributed to "The Go
 # Authors" licensed as BSD-3-Clause.
