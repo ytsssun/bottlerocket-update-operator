@@ -83,8 +83,8 @@ spec:
       {{- if .Values.placement.controller.priorityClassName }}
       priorityClassName: {{ .Values.placement.controller.priorityClassName | quote }}
       {{- end }}
-      {{ if ((.Values.image_pull_secrets)) }}
-      image_pull_secrets: 
-        {{ .Values.image_pull_secrets }}
-      {{ end }}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       serviceAccountName: brupop-controller-service-account

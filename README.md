@@ -134,7 +134,7 @@ placement:
 #  --docker-username=AWS \
 #  --docker-password=$(aws --region us-west-2 ecr get-login-password) \
 #  --namespace=brupop-bottlerocket-aws
-#image_pull_secrets: |-
+#imagePullSecrets:
 #  - name: "brupop"
 
 # External load balancer setting.
