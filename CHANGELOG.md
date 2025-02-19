@@ -1,3 +1,25 @@
+# 1.5.0
+## General
+
+Added
+* Support topologySpreadConstraints for the apiserver resource ([#672] thanks @AviorSchreiber)
+* Update bottlerocket sdk version from 0.42.0 to 0.50.1 ([#709])
+* Allow brupop-controller-deployment pods to be discovered by Splunk otel-collector ([#677] thanks @AndreiBanaruTakeda)
+
+Fixed
+* Fixed a bug in which the image pull secrets were not correctly rendered ([#715])
+
+Misc
+* Numerous dependency upgrades and documentation fixes ([#659], [#669], [#709], [#716])
+
+[#659]: https://github.com/bottlerocket-os/bottlerocket-update-operator/pull/659
+[#669]: https://github.com/bottlerocket-os/bottlerocket-update-operator/pull/669
+[#672]: https://github.com/bottlerocket-os/bottlerocket-update-operator/pull/672
+[#677]: https://github.com/bottlerocket-os/bottlerocket-update-operator/pull/677
+[#709]: https://github.com/bottlerocket-os/bottlerocket-update-operator/pull/709
+[#715]: https://github.com/bottlerocket-os/bottlerocket-update-operator/pull/715
+[#716]: https://github.com/bottlerocket-os/bottlerocket-update-operator/pull/716
+
 # 1.4.0
 
 ## General
